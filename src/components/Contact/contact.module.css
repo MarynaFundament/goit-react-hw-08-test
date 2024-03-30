@@ -1,0 +1,17 @@
+.element{
+
+    width: 250px;
+    height: 125px;
+    border: 1.5px solid black;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.icon{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
