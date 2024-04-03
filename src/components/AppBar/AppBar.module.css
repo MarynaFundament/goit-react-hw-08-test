@@ -1,0 +1,26 @@
+.header{
+    border-bottom: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+
+    padding-left: 20px;
+    margin-left: -8px;
+
+    padding-right: 20px;
+    margin-right: -8px;
+
+}
+
+.auth{
+    display: flex;
+    gap: 20px;
+
+}
+
+.navigation{
+    display: flex;
+    gap: 20px;
+
+    background-color: pink;
+
+}
