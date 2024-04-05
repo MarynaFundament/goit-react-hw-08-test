@@ -1,6 +1,5 @@
 import { Formik, Form, Field, ErrorMessage } from "formik"
-import * as Yup from 'yup';
-import { nanoid } from 'nanoid'
+// import * as Yup from 'yup';
 
 import styles from "./form.module.css"
 import { useDispatch } from "react-redux"
@@ -10,21 +9,25 @@ const initialFormData = {
     name: "",
     email: "",
     password:"",
-    id: nanoid()
    }
 
 
-const UserSchema = Yup.object().shape({
-    name: Yup.string()
-    .min(3, "Too short!")
-    .max(50, "Too long!")
-    .required("Name is required"), 
+// const UserSchema = Yup.object().shape({
+//     name: Yup.string()
+//     .min(3, "Too short!")
+//     .max(50, "Too long!")
+//     .required("Name is required"), 
 
-    number: Yup.string()
-    .min(3, "Too short!")
-    .max(50, "Too long!")
-    .required("Number id required"), 
-})
+//     email: Yup.string()
+//     .min(3, "Too short!")
+//     .max(50, "Too long!")
+//     .required("Number id required"), 
+
+//     password: Yup.string()
+//     .min(3, "Too short!")
+//     .max(50, "Too long!")
+//     .required("Number id required"), 
+// })
 
 export default function RegistrationForm(){
     const dispatch = useDispatch()
@@ -39,28 +42,28 @@ export default function RegistrationForm(){
     return (
         <Formik 
         initialValues = {initialFormData}
-        validationSchema = {UserSchema}
+        // validationSchema = {UserSchema}
         onSubmit = {handleSubmit} >
 
            <Form> 
             <div className={styles.element}>
                 <label htmlFor="name"> Username </label>
                 <Field className={styles.field} type="text" name="name"></Field>
-                <ErrorMessage name="name"/>
+                {/* <ErrorMessage name="name"/> */}
                
             </div>
 
             <div className={styles.element}>
                 <label htmlFor="email"> Email </label>
                 <Field className={styles.field} type="email" name="email"></Field> 
-                <ErrorMessage name="email"/>
+                {/* <ErrorMessage name="email"/> */}
 
             </div>
                  
             <div className={styles.element}>
                 <label htmlFor="password"> Password </label>
                 <Field className={styles.field} type="password" name="password"></Field> 
-                <ErrorMessage name="password"/>
+                {/* <ErrorMessage name="password"/> */}
 
             </div>
 
