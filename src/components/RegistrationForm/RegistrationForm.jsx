@@ -4,12 +4,11 @@ import { nanoid } from 'nanoid'
 
 import styles from "./form.module.css"
 import { useDispatch } from "react-redux"
-import { addContact } from "../../redux/contactsOps"
 import { register } from "../../redux/auth/operation";
 
 const initialFormData = {
     name: "",
-    number: "",
+    email: "",
     password:"",
     id: nanoid()
    }
@@ -31,7 +30,7 @@ export default function RegistrationForm(){
     const dispatch = useDispatch()
 
     const handleSubmit = (values, actions) => {
-        // console.log(values)
+    
         dispatch(register(values));
         actions.resetForm()
     }
@@ -52,9 +51,9 @@ export default function RegistrationForm(){
             </div>
 
             <div className={styles.element}>
-                <label htmlFor="number"> Email </label>
-                <Field className={styles.field} type="text" name="number"></Field> 
-                <ErrorMessage name="number"/>
+                <label htmlFor="email"> Email </label>
+                <Field className={styles.field} type="email" name="email"></Field> 
+                <ErrorMessage name="email"/>
 
             </div>
                  
@@ -65,7 +64,7 @@ export default function RegistrationForm(){
 
             </div>
 
-            <button type="submit"> Add contact </button>
+            <button type="submit"> Login </button>
             </Form>
         </Formik>
     )
