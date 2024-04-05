@@ -18,6 +18,19 @@ export default function Navigation (){
                 Movies 
             </NavLink>
 
+            <NavLink
+            to = "/register"
+            > 
+                Register
+             </NavLink>
+
+
+             <NavLink
+            to = "/login"
+            > 
+                Login
+             </NavLink>
+
         </nav>
     )
 }
