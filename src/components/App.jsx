@@ -28,24 +28,20 @@ export const App = () => {
 
   return (
     <div>
-{/* <h1>Phonebook</h1> */}
+
 
 <Layout>
+
 <Suspense fallback={<div>Loading...</div>}>
+
    <Routes>
 
-   <Route path="/" element = {<HomePage/>}/>
+   <Route path="/" element = {<RegisterPage/>}/>
    <Route path="/register" element = {<RegisterPage/> }/>
    <Route path="/login" element = {<LoginPage/> }/>
    <Route path="/tasks" element = { <TasksPage/> }/>
 
-    {/* <ContactForm />
-
-      {loading && <p>Loading</p>}
-      {error && <p>Error</p>}
-
-      <SearchBox />
-      <ContactList /> */}
+  
       </Routes>
       </ Suspense>
 

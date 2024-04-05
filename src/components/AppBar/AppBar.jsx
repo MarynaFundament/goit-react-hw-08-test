@@ -15,8 +15,7 @@ const isLoggedIn = useSelector(selectIsLoggedIn)
         <header className={styles.header}>
          
            <Navigation/> 
-            
-          
+        
            { isLoggedIn ? <UserMenu/> : <AuthNav /> }
         </header>
     )

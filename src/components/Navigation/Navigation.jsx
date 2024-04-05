@@ -15,7 +15,6 @@ export default function Navigation (){
             <NavLink
             to = "/movies"
             >
-
                 Movies 
             </NavLink>
 
