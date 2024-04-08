@@ -6,8 +6,9 @@ import { useEffect } from "react";
 import { Route, Routes} from "react-router-dom";
 import { lazy, Suspense } from 'react';
 import { useDispatch, useSelector } from "react-redux";
-import { fetchContacts } from "../redux/contactsOps";
-import { selectError, selectLoading } from "../redux/contactsSlice";
+
+// import { fetchContacts } from "../redux/contactsOps";
+// import { selectError, selectLoading } from "../redux/contactsSlice";
 import Layout from "./Layout";
 
 const HomePage = lazy(() => import("../pages/Home"));
@@ -17,14 +18,11 @@ const TasksPage = lazy(() => import("../pages/Tasks"));
 
 export const App = () => {
 
-  const dispatch = useDispatch()
-  const loading = useSelector(selectLoading)
-  const error = useSelector(selectError)
+  const dispatch = useDispatch();
 
-  useEffect(() => {
-
-    dispatch(fetchContacts())
-  }, [dispatch])
+  // useEffect(() => {
+  //   dispatch(refreshUser());
+  // }, [dispatch]);
 
   return (
     <div>

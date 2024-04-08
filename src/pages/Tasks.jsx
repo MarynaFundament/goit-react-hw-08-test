@@ -1,19 +1,16 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-
+import { TaskEditor } from "../components/TaskEditor/TaskEditor";
+import { TaskList } from "../components/TaskList/TaskList";
 
 export default function Tasks(){
     const dispatch = useDispatch();
 
-    useEffect(() => {
-        dispatch()
-    }, [dispatch])
 
 return (
     <>
-    <PageTitle>Your tasks</PageTitle>
+    <p>Your tasks</p>
     <TaskEditor/>
-    <div>{isLoading && "Request in progress..."}</div>
     <TaskList />
     </>
 )
